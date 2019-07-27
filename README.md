@@ -224,7 +224,7 @@ arr.push(1);
 // caso 2
 const arr = [];
 arr.__proto__.push = function() {
-  console.log('Nope');
+  console.log('Nope :trollface:');
 }
 
 arr.push(1);
