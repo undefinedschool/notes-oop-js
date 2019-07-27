@@ -1,4 +1,4 @@
-# Notas sonbre Programación Orientada a Objetos en JS
+# Notas sobre Programación Orientada a Objetos en JS
 
 > El siguiente contenido fue elaborado por [@_nhsz](https://twitter.com/_nhsz) como guía para las clases relacionadas a OOP de [undefined school](https://undefinedschool.io)
 
