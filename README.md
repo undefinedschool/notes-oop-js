@@ -686,6 +686,33 @@ console.log(Dog.prototype.isPrototypeOf(fluffy));
 
 ### Herencia basada en prototipos (Prototypal Inheritance)
 
+#### 1. Constructor
+
+- Los _constructores_ nos permiten construir e inicializar objetos
+- **Son funciones**, que pueden tomar ciertos argumentos y setearlos como propiedades del nuevo objeto
+- Por convención y para distinguirlos de otras funciones, se suele escribir _la primer letra en mayúscula_
+- Los invocamos utilizando la keyword `new`
+
+```js
+const protoPokeBall = {
+  getSize() {
+    console.log(this._size);
+  },
+  getColor() {
+    console.log(this._color);
+  }
+};
+
+function PokeBall(size, color) {
+   this._size = size;
+   this._color = color;
+};
+
+PokeBall.prototype = protoPokeBall;
+
+const ultraBall = new PokeBall(3, 'black');
+```
+
 - Usamos la ya conocida _Prototype Chain_
 - Si usamos `Class`, para que una 'clase' (falsa) herede de otra, es decir, sea una _subclase_, usamos `extends`
   - De esta forma, los objetos creados a partir de la 'subclase' (falsa) heredarán propiedades definidas en esta y en la 'superclase'
