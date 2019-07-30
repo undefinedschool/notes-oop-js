@@ -694,6 +694,53 @@ console.log(Dog.prototype.isPrototypeOf(fluffy));
 - Los invocamos utilizando la keyword `new`
 
 ```js
+function PokeBall(size, color) {
+   // props
+   this._size = size;
+   this._color = color;
+
+   // methods
+   this.getSize = function() {
+     console.log(this._size);
+   };
+   this.getColor = function() {
+     console.log(this._color);
+   }
+};
+
+const ultraBall = new PokeBall(3, 'black');
+```
+
+#### 2. Seteando el prototipo
+
+- Los objetos creados sin un prototipo seteado explícitamente, tendran como prototipo al objeto `Object`
+- El prototipo se setea en la propiedad `prototype` de la función constructora
+
+##### Forma 1: adjuntando métodos 
+
+```js
+function PokeBall(size, color) {
+   this._size = size;
+   this._color = color;
+};
+
+PokeBall.prototype.getSize = function() {
+  console.log(this._size);
+}
+
+PokeBall.prototype.getColor = function() {
+  console.log(this._color);
+}
+
+const ultraBall = new PokeBall(3, 'black');
+
+// ver las propiedades de la función/objeto constructora
+console.dir(PokeBall);
+```
+
+##### Forma 2: definiendo un objeto como prototipo
+
+```js
 const protoPokeBall = {
   getSize() {
     console.log(this._size);
@@ -711,6 +758,9 @@ function PokeBall(size, color) {
 PokeBall.prototype = protoPokeBall;
 
 const ultraBall = new PokeBall(3, 'black');
+
+// ver las propiedades de la función/objeto constructora
+console.dir(PokeBall);
 ```
 
 - Usamos la ya conocida _Prototype Chain_
