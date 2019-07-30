@@ -282,7 +282,7 @@ multiplyBy2.prototype; // {}
 
 - Es un método de `Object` que crea un nuevo objeto, con el prototipo seteado a un cierto objeto
 - Es más _natural_ para el modelo de prototipos que la keyword `new`
-- **Utilizar `Object.create`en lugar de `Object.setPrototypeOf`
+- **Utilizar `Object.create`en lugar de `Object.setPrototypeOf`**
 
 ```js
 const animal = {
