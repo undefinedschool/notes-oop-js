@@ -6,7 +6,31 @@
 
 > Si el contenido te resultó útil y querés colaborar, podés hacerlo [acá](https://trello.com/c/TFbCZtPN/34-donaciones) (se acepta BTC :P). Gracias!
 
----
+## Índice
+
+- [Objetos](https://github.com/undefinedschool/oop-js/blob/master/README.md#objetos)
+  - [Sintaxis](https://github.com/undefinedschool/oop-js/blob/master/README.md#sintaxis)
+- [POO](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo)
+- [Prototype](https://github.com/undefinedschool/oop-js/blob/master/README.md#prototype)
+  - [Herencia basada en prototipos (_Prototypal Inheritance_)](https://github.com/undefinedschool/oop-js/blob/master/README.md#herencia-basada-en-prototipos-prototypal-inheritance)
+- [Las funciones son funciones... y objetos
+](https://github.com/undefinedschool/oop-js/blob/master/README.md#las-funciones-son-funciones-y-objetos)
+  - [Combo función-objeto](https://github.com/undefinedschool/oop-js/blob/master/README.md#combo-funci%C3%B3n-objeto)
+- [`Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#objectcreate)
+- [`new` keyword](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-keyword)
+  - [`new` behind the scenes](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-behind-the-scenes)
+- [`new` vs `Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-vs-objectcreate)
+- [`bind`](https://github.com/undefinedschool/oop-js/blob/master/README.md#bind)
+- [El problema que tenemos al usar `this`](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-problema-que-tenemos-al-usar-this)
+- [`Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#class)
+  - [Herencia con `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#herencia-con-class)
+  - [`Class` behind the scenes](https://github.com/undefinedschool/oop-js/blob/master/README.md#class-behind-the-scenes)
+- [Polimorfismo](https://github.com/undefinedschool/oop-js/blob/master/README.md#polimorfismo)
+  - [Usando prototipos](https://github.com/undefinedschool/oop-js/blob/master/README.md#usando-prototipos)
+  - [Usando `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#usando--class)
+- [POO: Conceptos fundamentales explicados brevemente](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo-conceptos-fundamentales-explicados-resumidamente)
+- [Bonus: Cómo hacemos para clonar un objeto?](https://github.com/undefinedschool/oop-js/blob/master/README.md#question-c%C3%B3mo-hacemos-para-clonar-un-objeto)
+- [Conclusión](https://github.com/undefinedschool/oop-js/blob/master/README.md#conclusi%C3%B3n)
 
 ```js
 // 1
@@ -901,40 +925,6 @@ console.log(ken);
 ryu.login();
 ```
 
-### :question: **Cómo hacemos para clonar un objeto?**
-
-#### Solución 1
-
-```js
-// iterando las keys del objeto original y agregándolas con sus valores a la copia
-const circle = {
-  radius: 1,
-  draw() {
-    console.log('draw');
-  }
-}
-
-const circleClone = {};
-
-for (key in circle) {
-  circleClone[key] = circle[key];
-}
-```
-
-#### Solución 2
-
-```js
-// the ninja way
-const circle = {
-  radius: 1,
-  draw() {
-    console.log('draw');
-  }
-}
-
-const circleClone = {...circle};
-```
-
 ### Polimorfismo
 
 - La palabra viene del griego _poli_ (muchos) y _morfo_ (forma), muchas formas
@@ -1054,7 +1044,7 @@ dog.makeSound();
 cat.makeSound();
 ```
 
-## POO: Conceptos fundamentales explicados resumidamente
+## POO: Conceptos fundamentales explicados brevemente
 
 - **Objeto:** colección de datos/funcionalidades relacionados (variables y funciones), que llamamos _propiedades_
 - **Propiedad:** par clave-valor, donde el valor puede ser algún tipo primitivo de JS u otro objeto
@@ -1062,6 +1052,40 @@ cat.makeSound();
 - **Encapsulación:** Separación entre la _interfaz_ del objeto y su implementación. Interactuamos con los objetos sólo a través de las propiedades y métodos que nos exponen en su _interfaz_ y no de otra forma
 - **Herencia:** un objeto puede acceder y utilizar propiedades/métodos definidos en su prototipo, o en el prototipo de su prototipo, etc, lo que llamamos su _Prototype Chain_. Básicamente es una transferencia de propiedades entre objetos, de _'arriba' hacia 'abajo'_ en la cadena. **Es el mecanismo para reutilizar código que nos brinda el paradigma.**
 - **Polimorfismo:** propiedad que permite que objetos de diferentes tipos o 'clases' puedan responder a los mismos mensajes/métodos. Esto se logra sobreescribiendo un método de una clase en una subclase y nos permite _tratar de la misma forma a objetos de tipos diferentes_
+
+### :question: **Bonus: Cómo hacemos para clonar un objeto?**
+
+#### Solución 1
+
+```js
+// iterando las keys del objeto original y agregándolas con sus valores a la copia
+const circle = {
+  radius: 1,
+  draw() {
+    console.log('draw');
+  }
+}
+
+const circleClone = {};
+
+for (key in circle) {
+  circleClone[key] = circle[key];
+}
+```
+
+#### Solución 2
+
+```js
+// the ninja way
+const circle = {
+  radius: 1,
+  draw() {
+    console.log('draw');
+  }
+}
+
+const circleClone = {...circle};
+```
 
 ## Conclusión
 
