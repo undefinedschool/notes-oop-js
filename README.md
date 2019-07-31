@@ -616,7 +616,43 @@ video.showTags();
 
 ### Class
 
+#### `Prototype` version vs `Class` version
+
 ```js
+function User(email, name) {
+  this._email = email;
+  this._name = name;
+}
+
+User.prototype.login = function() {
+  console.log(`${this._email} just logged in`);
+};
+
+User.prototype.getEmail = function() {
+  return this._email;
+};
+
+User.prototype.getName = function() {
+  return this._name;
+};
+
+const userOne = new User('ryu@ninjas.com', 'Ryu');
+userOne.login();
+
+// check logs
+console.log(userOne.__proto__);
+console.log(User.prototype);
+console.dir(userOne);
+console.dir(userOne.__proto__);
+console.dir(User.prototype);
+console.log(userOne.__proto__ === User.prototype);
+```
+
+- Al definir los métodos dentro de una clase, JS se encarga por nosotros de definirlos en el `prototype` de la función constructora
+- **`Class User` es nuestra vieja y conocida función constructora, con otra sintaxis!**
+
+```js
+// aplicando un poco de syntax sugar...
 class User {
   constructor(email, name) {
     this._email = email;
@@ -637,7 +673,18 @@ class User {
 }
 
 const userOne = new User('ryu@ninjas.com', 'Ryu');
+userOne.login();
+
+// check logs
+console.log(userOne.__proto__);
+console.log(User.prototype);
+console.dir(userOne);
+console.dir(userOne.__proto__);
+console.dir(User.prototype);
+console.log(userOne.__proto__ === User.prototype);
 ```
+
+#### Herencia con `Class`
 
 ```js
 class Mammal {
