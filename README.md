@@ -992,7 +992,7 @@ cat.makeSound();
 - **Propiedad:** par clave-valor, donde el valor puede ser algún tipo primitivo de JS u otro objeto
 - **Método:** propiedad de un objeto cuyo valor es una función. Función ligada a un objeto
 - **Encapsulación:** Separación entre la _interfaz_ del objeto y su implementación. Interactuamos con los objetos sólo a través de las propiedades y métodos que nos exponen en su _interfaz_ y no de otra forma
-- **Herencia:** un objeto puede acceder y utilizar propiedades/métodos definidos en su prototipo, o en el prototipo de su prototipo, etc, lo que llamamos su _Prototype Chain_. Básicamente es una transferencia de propiedades entre objetos, de _'arriba' hacia 'abajo'_ en la cadena
+- **Herencia:** un objeto puede acceder y utilizar propiedades/métodos definidos en su prototipo, o en el prototipo de su prototipo, etc, lo que llamamos su _Prototype Chain_. Básicamente es una transferencia de propiedades entre objetos, de _'arriba' hacia 'abajo'_ en la cadena. **Es el mecanismo para reutilizar código que nos brinda el paradigma.**
 - **Polimorfismo:** propiedad que permite que objetos de diferentes tipos o 'clases' puedan responder a los mismos mensajes/métodos. Esto se logra sobreescribiendo un método de una clase en una subclase.
 
 ## Conclusión
