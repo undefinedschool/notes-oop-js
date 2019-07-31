@@ -649,6 +649,7 @@ console.log(userOne.__proto__ === User.prototype);
 ```
 
 - Al definir los métodos dentro de una clase, JS se encarga por nosotros de definirlos en el `prototype` de la función constructora
+- Renombramos la _parte función_ del combo _función-objeto_ `User` como `constructor`
 - **`Class User` es nuestra vieja y conocida función constructora, con otra sintaxis!**
 
 ```js
