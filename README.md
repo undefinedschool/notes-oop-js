@@ -136,15 +136,6 @@ aTeletubbie.currentPosition;
 
 > :star: **Tener nociones de estos paradigmas nos va a ayudar a entender mejor las herramientas que utilizamos**
 
-## POO: Conceptos fundamentales
-
-- Objeto
-- Propiedad
-- Método
-- Encapsulación
-- Herencia
-- Polimorfismo
-
 ![](https://i.imgur.com/INMK9IM.png)
 
 ### Prototype
@@ -949,7 +940,11 @@ const circleClone = {...circle};
 - La palabra viene del griego _poli_ (muchos) y _morfo_ (forma), muchas formas
 - Es una propiedad que nos **permite enviar mensajes sintácticamente iguales a objetos de tipos distintos**. El único requisito que deben cumplir los objetos que se utilizan de manera polimórfica es saber responder al mensaje que se les envía.
 - _tl;dr_ propiedad que permite que objetos de diferentes tipos/'clases' puedan responder a los mismos mensajes/métodos
-  - Consiste en sobreescribir un método de una clase en una subclase
+  - Esto se logra sobreescribiendo un método de una clase en una subclase
+
+```js
+
+```
 
 ```js
 class Animal {
@@ -997,8 +992,8 @@ cat.makeSound();
 - **Propiedad:** par clave-valor, donde el valor puede ser algún tipo primitivo de JS u otro objeto
 - **Método:** propiedad de un objeto cuyo valor es una función. Función ligada a un objeto
 - **Encapsulación:** Separación entre la _interfaz_ del objeto y su implementación. Interactuamos con los objetos sólo a través de las propiedades y métodos que nos exponen en su _interfaz_ y no de otra forma
-- **Herencia:** completar
-- **Polimorfismo:** completar
+- **Herencia:** un objeto puede acceder y utilizar propiedades/métodos definidos en su prototipo, o en el prototipo de su prototipo, etc, lo que llamamos su _Prototype Chain_. Básicamente es una transferencia de propiedades entre objetos, de _'arriba' hacia 'abajo'_ en la cadena
+- **Polimorfismo:** propiedad que permite que objetos de diferentes tipos o 'clases' puedan responder a los mismos mensajes/métodos. Esto se logra sobreescribiendo un método de una clase en una subclase.
 
 ## Conclusión
 
