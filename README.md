@@ -247,7 +247,7 @@ delete arr.__proto__.push;
 arr.push(1);
 ```
 
-- [delete operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [delete operator - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 
 ### Las funciones son funciones... y objetos
 
@@ -255,6 +255,15 @@ arr.push(1);
 - Por lo tanto podemos tratarlas como cualquier otro valor, por ejemplo pasarlas por parámetro o retornarlas desde otra función
 - Por eso también decimos que las funciones en javascript son _funciones de alto orden_
 - Y todo esto lo podemos hacer porque las funciones... son objetos!
+
+```js
+// creando funciones con la función constructora
+const sum = new Function('a', 'b', 'return a + b');
+
+console.log(sum(2, 6));
+```
+
+- [Function - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
 
 #### Combo función-objeto
 
