@@ -938,13 +938,81 @@ const circleClone = {...circle};
 ### Polimorfismo
 
 - La palabra viene del griego _poli_ (muchos) y _morfo_ (forma), muchas formas
-- Es una propiedad que nos **permite enviar mensajes sintácticamente iguales a objetos de tipos distintos**. El único requisito que deben cumplir los objetos que se utilizan de manera polimórfica es saber responder al mensaje que se les envía.
-- _tl;dr_ propiedad que permite que objetos de diferentes tipos/'clases' puedan responder a los mismos mensajes/métodos
+- **Definición formal:** propiedad que nos **permite enviar mensajes sintácticamente iguales (es decir, que se llaman igual y toman los mismos parámetros) a objetos de tipos distintos**. El único requisito que deben cumplir los objetos que se utilizan de manera polimórfica es saber responder al mensaje que se les envía
+- _tl;dr_ Propiedad que permite que objetos de diferentes tipos/'clases' puedan responder a los mismos mensajes/métodos
   - Esto se logra sobreescribiendo un método de una clase en una subclase
+- Propiedad que nos permite tratar de la misma forma a objetos de tipos diferentes
+- Cuando hablamos de _objetos de diferentes tipos_ en el contexto de _polimorfismo_, nos referimos a objetos cuyos prototipos son diferentes ó que son (con muchas comillas) _'instancias'_ de diferentes _'clases'_
+
+#### Ejemplo con prototipos
+
+##### Estableciendo la herencia
 
 ```js
+const User = {
+  active: false,
+  sayHello() {
+    console.log(`${this.name} says hi!`)
+  }
+};
 
+const Student = {
+  name: 'Morty',
+  major: 'JavaScript'
+};
+
+const Professor = {
+  name: 'Rick',
+  teaching: ['JavaScript', 'NodeJS', 'Physics']
+};
+
+Object.setPrototypeOf(Student, User);
+Object.setPrototypeOf(Professor, User);
+
+Student.active = true;
+
+const newUsers = [Student, Professor];
+
+newUsers.forEach(user => user.sayHello())
 ```
+
+##### Sobreescribiendo métodos del prototipo
+
+```js
+const User = {
+  active: false,
+  describe() {
+    console.log(`${this.name} says hi!`)
+  }
+};
+
+const Student = {
+  name: 'Morty',
+  major: 'JavaScript',
+  describe() {
+    console.log(`${this.name} studies ${this.major}`);
+  }
+};
+
+const Professor = {
+  name: 'Rick',
+  teaching: ['JavaScript', 'NodeJS', 'Physics'],
+  describe() {
+    console.log(`${this.name} teaches ${this.teaching}`);
+  }
+};
+
+Object.setPrototypeOf(Student, User);
+Object.setPrototypeOf(Professor, User);
+
+Student.active = true;
+
+const newUsers = [Student, Professor];
+
+newUsers.forEach(user => user.describe())
+```
+
+#### Ejemplo con  `Class`
 
 ```js
 class Animal {
@@ -993,8 +1061,8 @@ cat.makeSound();
 - **Método:** propiedad de un objeto cuyo valor es una función. Función ligada a un objeto
 - **Encapsulación:** Separación entre la _interfaz_ del objeto y su implementación. Interactuamos con los objetos sólo a través de las propiedades y métodos que nos exponen en su _interfaz_ y no de otra forma
 - **Herencia:** un objeto puede acceder y utilizar propiedades/métodos definidos en su prototipo, o en el prototipo de su prototipo, etc, lo que llamamos su _Prototype Chain_. Básicamente es una transferencia de propiedades entre objetos, de _'arriba' hacia 'abajo'_ en la cadena. **Es el mecanismo para reutilizar código que nos brinda el paradigma.**
-- **Polimorfismo:** propiedad que permite que objetos de diferentes tipos o 'clases' puedan responder a los mismos mensajes/métodos. Esto se logra sobreescribiendo un método de una clase en una subclase.
+- **Polimorfismo:** propiedad que permite que objetos de diferentes tipos o 'clases' puedan responder a los mismos mensajes/métodos. Esto se logra sobreescribiendo un método de una clase en una subclase y nos permite _tratar de la misma forma a objetos de tipos diferentes_
 
 ## Conclusión
 
-> :star::star::star: La idea de usar paradigmas (como POO) es tener herramientas para organizar mejor nuestro código, para que sea más legible, fácil de razonar, mantenible, etc. En el caso de POO, lo que nos interesa principalmente es encapsular/empaquetar datos relacionados con funciones que podemos aplicar sobre esos datos y dividir nuestro programa en estos objetos, que interactúan entre si.
+> :star::star::star: La idea de usar paradigmas (como POO) es tener herramientas para organizar mejor nuestro código, para que sea más legible, fácil de razonar, mantenible, etc. En el caso de POO, lo que nos interesa principalmente es encapsular/empaquetar datos relacionados con funciones que podemos aplicar sobre esos datos y dividir nuestro programa en estos objetos, que interactúan entre si a traves de su interfaz, intercambiando mensajes
