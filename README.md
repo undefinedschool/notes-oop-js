@@ -944,7 +944,7 @@ const circleClone = {...circle};
 - Propiedad que nos permite tratar de la misma forma a objetos de tipos diferentes
 - Cuando hablamos de _objetos de diferentes tipos_ en el contexto de _polimorfismo_, nos referimos a objetos cuyos prototipos son diferentes ó que son (con muchas comillas) _'instancias'_ de diferentes _'clases'_
 
-#### Ejemplo con prototipos
+#### Usando prototipos
 
 ##### Estableciendo la herencia
 
@@ -1012,7 +1012,7 @@ const newUsers = [Student, Professor];
 newUsers.forEach(user => user.describe())
 ```
 
-#### Ejemplo con  `Class`
+#### Usando  `Class`
 
 ```js
 class Animal {
