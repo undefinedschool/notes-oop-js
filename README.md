@@ -737,6 +737,7 @@ console.log(typeof Dog);
 console.log(Dog.prototype.isPrototypeOf(fluffy));
 ```
 
+- [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super) es una _keyword_ que utilizamos para acceder a propiedades y métodos de una _superclase_, por ejemplo el constructor
 - :warning: JavaScript no tiene clases! Es sólo _sugar syntax_ sobre lo que ya conocemos de prototipos
 - :question: **En los ejemplos que vimos recién, cuáles serían los prototipos?**
 - :star: Si usamos `Class`, la `new` keyword es requerida para crear nuevos objetos (no pasa si usamos las funciones de siempre y tiene consecuencias sobre el `this`)
@@ -945,7 +946,50 @@ const circleClone = {...circle};
 
 ### Polimorfismo
 
-Completar
+- La palabra viene del griego _poli_ (muchos) y _morfo_ (forma), muchas formas
+- Es una propiedad que nos **permite enviar mensajes sintácticamente iguales a objetos de tipos distintos**. El único requisito que deben cumplir los objetos que se utilizan de manera polimórfica es saber responder al mensaje que se les envía.
+- _tl;dr_ propiedad que permite que objetos de diferentes tipos/'clases' puedan responder a los mismos mensajes/métodos
+  - Consiste en sobreescribir un método de una clase en una subclase
+
+```js
+class Animal {
+  constructor(name) {
+    this._name = name;
+  }
+
+  makeSound() {
+    console.log('🔉 Default sound!');
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
+
+  makeSound() {
+    console.log('🐶 WoOof!')
+  }
+}
+
+class Cat extends Animal {
+  constructor(name) {
+    super(name);
+  }
+
+  makeSound() {
+    console.log('🐱 MeowW!')
+  }
+}
+
+const animal = new Animal('Doggie');
+animal.makeSound();
+
+const dog = new Dog('Beethoven');
+const cat = new Cat('Felix');
+dog.makeSound();
+cat.makeSound();
+```
 
 ## POO: Conceptos fundamentales explicados resumidamente
 
