@@ -501,7 +501,7 @@ user.info();
 ### El problema que tenemos al usar `this`
 
 - **`this` es un _parámetro implícito_ que tienen todas las funciones en JS. Hace referencia al contexto actual y por contexto queremos decir _un objeto_**
-- **Por default, `this` no hace referencia al contexto en el que se creó la función, sino al contexto en que fue invocada** (_salvo que usemos arrow functions_)
+- **Por default, `this` no hace referencia al contexto en el que se creó la función, sino al contexto en que fue invocada** (_salvo que usemos arrow functions_) **es decir, desde dónde la estamos llamando**
 - Cuando la función es un método de un objeto, `this` hace referencia al objeto a la izquierda del `.`
 - Si es una función cualquiera, `this` hace referencia al contexto global (objeto `window` en el browser y `global` en Node)
 - :warning: **Recuerden que siempre que entramos a una función, estamos generando un _nuevo contexto de ejecución_, por eso cambia**
