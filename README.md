@@ -30,6 +30,7 @@
   - [Usando `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#usando--class)
 - [POO: Conceptos fundamentales explicados brevemente](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo-conceptos-fundamentales-explicados-brevemente)
 - [Bonus: Cómo hacemos para clonar un objeto?](https://github.com/undefinedschool/oop-js/blob/master/README.md#question-c%C3%B3mo-hacemos-para-clonar-un-objeto)
+- [Para seguir leyendo...](https://github.com/undefinedschool/oop-js/blob/master/README.md#para-seguir-leyendo)
 - [Conclusión](https://github.com/undefinedschool/oop-js/blob/master/README.md#conclusi%C3%B3n)
 
 ```js
