@@ -686,7 +686,7 @@ const video = {
   tags: ['horror', 'indie', 'thriller'],
   showTags() {
     this.tags.forEach(function(tag) {
-      console.log(this.title, tag);
+      console.log(this.title, tags);
     }, this)
   }
 }
