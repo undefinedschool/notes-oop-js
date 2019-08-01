@@ -1088,6 +1088,12 @@ const circle = {
 const circleClone = {...circle};
 ```
 
+## Para seguir leyendo...
+
+- [Working with Objects - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [Inheritance and the prototype chain - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Details_of_the_Object_Model - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+
 ## :star: Conclusión
 
 > La idea de usar paradigmas (como POO) es tener herramientas para organizar mejor nuestro código, para que sea más legible, fácil de razonar, mantenible, etc. 
