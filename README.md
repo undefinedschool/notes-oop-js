@@ -126,6 +126,7 @@ myCar.model = "Mustang";
 
 ## POO
 
+- _Programación Orientada a Objetos_ es un _paradigma de programación_ que utiliza _objetos_ para modelar _entidades_ del mundo real
 - Los objetos son el centro del _Paradigma Orientado a Objetos_, mejor conocido como _POO_ (_OOP_ en inglés)
 - JavaScript no sigue el paradigma más 'tradicional' de objetos, basado en clases, sino el basado en prototipos, aka _objetos sin clases_
 
@@ -191,7 +192,7 @@ Object.setPrototypeOf(cat, animal);
 cat.talk();
 ```
 
-> :star::star::star: En JS, utilizamos _prototipos_ para delegar características (propiedades) y comportamiento (métodos) a otros objetos
+> :star: En JS, utilizamos _prototipos_ para delegar características (propiedades) y comportamiento (métodos) a otros objetos
 
 - Las propiedades _propias_ de un objeto (es decir, las que están definidas en él) tienen precedencia sobre las propiedades de su prototipo que tengan el mismo nombre
 - El prototipo de un objeto actúa como _fallback_: si JS no encuentra una propiedad en un objeto, va a buscarla a su prototipo y sino al prototipo del prototipo, etc
@@ -455,7 +456,7 @@ user.info();
 
 - `bind` es un método de `Function`, que retorna una nueva función (setea el `this`), con un nuevo contexto... Se acuerdan que en JS las funciones eran funciones y objetos a la vez?
 
-> :star::star::star: El valor de `this` depende del contexto en el cual se llama a una función. Este contexto está dado por un objeto.
+> :star: El valor de `this` depende del contexto en el cual se llama a una función. Este contexto está dado por un objeto.
 
 - Usando `bind` hacemos explícito el contexto
 
@@ -1087,6 +1088,10 @@ const circle = {
 const circleClone = {...circle};
 ```
 
-## Conclusión
+## :star: Conclusión
 
-> :star::star::star: La idea de usar paradigmas (como POO) es tener herramientas para organizar mejor nuestro código, para que sea más legible, fácil de razonar, mantenible, etc. En el caso de POO, lo que nos interesa principalmente es encapsular/empaquetar datos relacionados con funciones que podemos aplicar sobre esos datos y dividir nuestro programa en estos objetos, que interactúan entre si a traves de su interfaz, intercambiando mensajes
+> La idea de usar paradigmas (como POO) es tener herramientas para organizar mejor nuestro código, para que sea más legible, fácil de razonar, mantenible, etc. 
+
+> _Programación Orientada a Objetos_ es un _paradigma de programación_ que utiliza _objetos_ para modelar _entidades_ del mundo real
+
+> En el caso de POO, lo que nos interesa principalmente es encapsular/empaquetar datos relacionados con funciones que podemos aplicar sobre esos datos y dividir nuestro programa en estos objetos, que interactúan entre si a traves de su interfaz, intercambiando mensajes
