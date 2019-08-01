@@ -15,6 +15,7 @@
   - [Herencia basada en prototipos (_Prototypal Inheritance_)](https://github.com/undefinedschool/oop-js/blob/master/README.md#herencia-basada-en-prototipos-prototypal-inheritance)
 - [Las funciones son funciones... y objetos
 ](https://github.com/undefinedschool/oop-js/blob/master/README.md#las-funciones-son-funciones-y-objetos)
+- [_Factory Function_ vs `constructor`](https://github.com/undefinedschool/oop-js/blob/master/README.md#factory-function-vs-constructor)
   - [Combo función-objeto](https://github.com/undefinedschool/oop-js/blob/master/README.md#combo-funci%C3%B3n-objeto)
 - [`Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#objectcreate)
 - [`new` keyword](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-keyword)
