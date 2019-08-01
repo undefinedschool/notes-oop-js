@@ -200,7 +200,7 @@ cat.talk();
   - Esto se conoce como _Prototype Chain_
   - Esta cadena termina con el prototipo de `Object`, `Object.prototype`, que es `null`, porque `null` no es un objeto y por lo tanto no puede tener una propiedad `__proto__`
 - Podemos utilizar el método `hasOwnProperty()` para diferenciar entre las propiedades propias de un objeto de las propiedades que hereda de su prototipo (`in` en cambio nos dice si una propiedad pertenece a la cadena de prototipos de un objeto)
-- Podemos _aumentar_ o _extender_ el prototipo de una función constructora (también conocida como [_Factory Function_](https://www.theodinproject.com/courses/javascript/lessons/factory-functions-and-the-module-pattern?ref=lnav)) ya existente modificando su propiedad `prototype` y todos los objetos creados con esta función tendrán las nuevas propiedades
+- Podemos _aumentar_ o _extender_ el prototipo de una función constructora (ó [_Factory Function_](https://www.theodinproject.com/courses/javascript/lessons/factory-functions-and-the-module-pattern?ref=lnav)) ya existente modificando su propiedad `prototype` y todos los objetos creados con esta función tendrán las nuevas propiedades
 
 ```js
 function Dog() {}
@@ -304,6 +304,42 @@ multiplyBy2.stored; // 5
 multiplyBy2.prototype; // {}
 ```
 
+### _Factory Function_ vs `constructor`
+
+#### _Factory Function_
+
+- En JavaScriptt, cualquier función puede retornar un objeto. Cuando no es una función consteructora o _clase_, la llamamos _Factory Function_
+
+```js
+function Person(firstName, lastName, age) {
+  const person = Object.create();
+
+  person.firstName = firstName;
+  person.lastName = lastName;
+  person.age = age;
+
+  return person;
+}
+
+const person = new Person('Dare', 'Devil', 32);
+```
+
+#### `constructor`
+
+- Por convención, se utiliza siempre la primer letra del nombre de la función en mayúscula para indicar que es una función constructora
+- Se invocan utilizando la keyword `new`
+- No necesitamos crear ni devolver el nuevo objeto a mano, `new` ya se encarga de eso
+
+```js
+function Person(firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+}
+
+const person = new Person('Dare', 'Devil', 32);
+```
+
 ### `Object.create`
 
 - Es un método de `Object` que crea un nuevo objeto, con el prototipo seteado a un cierto objeto
@@ -331,7 +367,7 @@ cat.talk();
 ### `new` keyword
 
 1. Crea un nuevo objeto vacío, el cual asigna a `this`
-2. Llama a la función _constructor_ (si usamos Class`) ó _Factory Function_ (si usamos prototipos)
+2. Llama a la función _constructora_ ó _Factory Function_
   - Si llamamos a la función que construye el nuevo objeto (_Factory Function_) sin `new` adelante (podemos, porque es una función), `this` será una referencia al objeto global `window` y no funcionará como esperamos. Por eso a modo de indicación, se suele escribir la primer letra de estas funciones con mayúscula, para indicar que se debe invocar usando `new`
 3. A este nuevo objeto le setea una propiedad oculta, `__proto__`, la cual tendrá una **referencia** a la propiedad`prototipe` (objeto) de la función
 4. Si la _Factory Function_ recibe algún parámetro, los usa para setear propiedades de este nuevo objeto
@@ -371,7 +407,7 @@ const user2 = UserCreator('John Connor', 4);
 ### `new` vs `Object.create`
 
 - `Object.create` crea un nuevo objeto vacío y además le asigna a este el prototipo que nosotros querramos, si le pasamos un argumento, sino le asigna `Object` como prototipo
-- `new` en cambio, es una llamada a una función constructora (ó _Factory Function_ si utilizamos prototipos), la cual también puede recibir argumentos, pero en este caso son para setear otras propiedades del objeto y no su prototipo
+- `new` en cambio, es una llamada a una función constructora (ó _Factory Function_), la cual también puede recibir argumentos, pero en este caso son para setear otras propiedades del objeto y no su prototipo
   - En este caso, el prototipo del nuevo objeto se obtiene a partir de la propiedad `prototipe` (objeto) de la función, a la cual se setea una referencia en la propiedad `__proto__` del nuevo objeto
 - Por último, con `Object.create` podemos crear un objeto que no herede de nadie (no tenga prototipo), usando `Object.create(null)`; mientras que, si seteamos `SomeConstructor.prototype = null`, el nuevo objeto va a heredar de `Object.prototype`
 
@@ -674,7 +710,7 @@ console.dir(User.prototype);
 console.log(userOne.__proto__ === User.prototype);
 ```
 
-- Al definir los métodos dentro de una clase, JS se encarga por nosotros de definirlos en el `prototype` de la función constructora (_Factory Function_)
+- Al definir los métodos dentro de una clase, JS se encarga por nosotros de definirlos en el `prototype` de la función constructora (ó _Factory Function_)
 - Renombramos la _parte función_ del combo _función-objeto_ `User` como `constructor`
 - **`Class User` es nuestra vieja y conocida función constructora, con otra sintaxis!**
 
