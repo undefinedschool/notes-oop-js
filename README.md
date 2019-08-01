@@ -28,7 +28,7 @@
 - [Polimorfismo](https://github.com/undefinedschool/oop-js/blob/master/README.md#polimorfismo)
   - [Usando prototipos](https://github.com/undefinedschool/oop-js/blob/master/README.md#usando-prototipos)
   - [Usando `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#usando--class)
-- [POO: Conceptos fundamentales explicados brevemente](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo-conceptos-fundamentales-explicados-resumidamente)
+- [POO: Conceptos fundamentales explicados brevemente](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo-conceptos-fundamentales-explicados-brevemente)
 - [Bonus: Cómo hacemos para clonar un objeto?](https://github.com/undefinedschool/oop-js/blob/master/README.md#question-c%C3%B3mo-hacemos-para-clonar-un-objeto)
 - [Conclusión](https://github.com/undefinedschool/oop-js/blob/master/README.md#conclusi%C3%B3n)
 
