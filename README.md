@@ -711,7 +711,7 @@ const video = {
 video.showTags();
 ```
 
-### El valor de `this`, tl;dr
+### tl;dr: el valor de `this`
 
 - `this` es...
   1. un _parámetro implícito_ que tienen todas las funciones en JS
@@ -721,7 +721,7 @@ video.showTags();
   1. si es una función común y corriente, `this` hace referencia al _contexto global_ (`Window` en el browser, `global` en Node)
   2. si es un método `m` de un objeto `x` y lo invocamos como `x.m()`, `this` hace referencia al objeto `x`
   3. si utilizamos una función constructora, que invocamos usando la keyword `new`, `this` hace referencia al nuevo objeto que creamos
-  4. hay métodos que tienen un [parámetro opcional]() para setear el valor de `this`, por ejemplo algunos de _Array_
+  4. hay métodos que tienen un [parámetro opcional](https://github.com/undefinedschool/oop-js/blob/master/README.md#bonus-algunos-m%C3%A9todos-tienen-un-this-como-par%C3%A1metro-opcional) para setear el valor de `this`, por ejemplo algunos de _Array_
   5. en el caso de ser necesario, podemos forzar el valor de `this` de [diversas formas](https://github.com/undefinedschool/oop-js/blob/master/README.md#c%C3%B3mo-forzar-el-valor-de-this)
 
 ## Class
