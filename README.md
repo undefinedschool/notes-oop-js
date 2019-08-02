@@ -498,6 +498,7 @@ user.info();
 > :star: El valor de `this` depende del contexto en el cual se llama a una función. Este contexto está dado por un objeto.
 
 - Usando `bind` hacemos explícito el contexto
+- Más info: [`bind` - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 
 ### El problema que tenemos al usar `this`
 
@@ -586,6 +587,8 @@ user.increment();
 - Gran fuente de bugs
 - Algo que muy probablemente les pregunten en una entrevista para hacerles caer en la trampa si hablan de objetos en JS
 
+### Cómo forzar el valor de `this`
+
 #### Solución 1
 
 - Guardamos el contexto antes, para desp hacer referencia
@@ -669,6 +672,7 @@ user.increment();
 
 - Cuando usamos _arrow functions_, `this` es asignado automáticamente al contexto (el `this`) dentro del cual la función fue declarada
   - Esto es lo que se conoce como _lexical scoping_
+- Además de [bind](https://github.com/undefinedschool/oop-js/blob/master/README.md#bind), podemos utilizar otros métodos similares como [`call`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) y [`apply`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
 #### Bonus: algunos métodos tienen un `this` como parámetro opcional...
 
