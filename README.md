@@ -17,13 +17,15 @@
 ](https://github.com/undefinedschool/oop-js/blob/master/README.md#las-funciones-son-funciones-y-objetos)
 - [_Factory Function_ vs `constructor`](https://github.com/undefinedschool/oop-js/blob/master/README.md#factory-function-vs-constructor)
   - [Combo función-objeto](https://github.com/undefinedschool/oop-js/blob/master/README.md#combo-funci%C3%B3n-objeto)
-- [`Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#objectcreate)
-- [`new` keyword](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-keyword)
-  - [`new` behind the scenes](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-behind-the-scenes)
-- [`new` vs `Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-vs-objectcreate)
+- [Creación de objetos](https://github.com/undefinedschool/oop-js#creaci%C3%B3n-de-objetos)
+  - [`Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#objectcreate)
+  - [`new` keyword](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-keyword)
+    - [`new` behind the scenes](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-behind-the-scenes)
+  - [`new` vs `Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-vs-objectcreate)
 - [`bind`](https://github.com/undefinedschool/oop-js/blob/master/README.md#bind)
 - [El problema que tenemos al usar `this`](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-problema-que-tenemos-al-usar-this)
   - [Cómo forzar el valor de `this`](https://github.com/undefinedschool/oop-js/blob/master/README.md#c%C3%B3mo-forzar-el-valor-de-this)
+  - [tl;dr Cómo saber el valor de `this`](https://github.com/undefinedschool/oop-js/blob/master/README.md#tldr-c%C3%B3mo-saber-el-valor-de-this)
 - [`Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#class)
   - [Herencia con `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#herencia-con-class)
   - [`Class` behind the scenes](https://github.com/undefinedschool/oop-js/blob/master/README.md#class-behind-the-scenes)
@@ -711,7 +713,7 @@ const video = {
 video.showTags();
 ```
 
-### tl;dr Cómo saber el valor de `this`
+### tl;dr: el valor de `this`
 
 - `this` es...
   1. un _parámetro implícito_ que tienen todas las funciones en JS
