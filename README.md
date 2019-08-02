@@ -711,7 +711,7 @@ const video = {
 video.showTags();
 ```
 
-### tl;dr: el valor de `this`
+### tl;dr Cómo saber el valor de `this`
 
 - `this` es...
   1. un _parámetro implícito_ que tienen todas las funciones en JS
