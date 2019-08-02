@@ -677,7 +677,7 @@ user.increment();
   - Esto es lo que se conoce como _lexical scoping_
 - Además de [bind](https://github.com/undefinedschool/oop-js/blob/master/README.md#bind), podemos utilizar otros métodos similares como [`call`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) y [`apply`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
-#### Bonus: algunos métodos tienen un `this` como parámetro opcional...
+### Bonus: algunos métodos tienen un `this` como parámetro opcional...
 
 - Se acuerdan, por ejemplo del parámetro opcional [`thisArg`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Parameters) del `forEach`?
 - Ahora nos viene bien! :rocket:
@@ -710,6 +710,19 @@ const video = {
 
 video.showTags();
 ```
+
+### El valor de `this`, tl;dr
+
+- `this` es...
+  1. un _parámetro implícito_ que tienen todas las funciones en JS
+  2. un objeto que representa el contexto en el cuál ejecutamos una función
+
+- el valor de `this` depende de varios factores...
+  1. si es una función común y corriente, `this` hace referencia al _contexto global_ (`Window` en el browser, `global` en Node)
+  2. si es un método `m` de un objeto `x` y lo invocamos como `x.m()`, `this` hace referencia al objeto `x`
+  3. si utilizamos una función constructora, que invocamos usando la keyword `new`, `this` hace referencia al nuevo objeto que creamos
+  4. hay métodos que tienen un [parámetro opcional]() para setear el valor de `this`, por ejemplo algunos de _Array_
+  5. en el caso de ser necesario, podemos forzar el valor de `this` de [diversas formas](https://github.com/undefinedschool/oop-js/blob/master/README.md#c%C3%B3mo-forzar-el-valor-de-this)
 
 ## Class
 
