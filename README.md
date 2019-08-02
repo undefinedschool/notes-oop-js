@@ -309,12 +309,13 @@ multiplyBy2.prototype; // {}
 
 #### _Factory Function_
 
-- En JavaScriptt, cualquier función puede retornar un objeto. Cuando no es una función consteructora o _clase_, la llamamos _Factory Function_
+- En JavaScript, cualquier función puede retornar un objeto. Cuando no es una función consteructora o _clase_, la llamamos _Factory Function_
 
 ```js
 function Person(firstName, lastName, age) {
   const person = Object.create();
 
+  // usamos `person`en lugar de `this` porque en este caso `this` no refiere al objeto nuevo que creamos, sino al global
   person.firstName = firstName;
   person.lastName = lastName;
   person.age = age;
@@ -322,7 +323,7 @@ function Person(firstName, lastName, age) {
   return person;
 }
 
-const person = new Person('Dare', 'Devil', 32);
+const person = Person('Dare', 'Devil', 32);
 ```
 
 #### `constructor`
