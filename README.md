@@ -500,6 +500,15 @@ user.info();
 
 ### El problema que tenemos al usar `this`
 
+- Las funciones pueden tener 2 tipos de parámetros: _explícitos_ (los que definimos nosotros) e _implícitos_. Estos últimos son parámetros que las funcionen tienen y nosotros no definimos
+
+```js
+// en esta función, a y b son parámetros explícitos
+function sum(a, b) {
+  return a + b;
+}
+```
+
 - **`this` es un _parámetro implícito_ que tienen todas las funciones en JS. Hace referencia al contexto actual y por contexto queremos decir _un objeto_**
 - **Por default, `this` no hace referencia al contexto en el que se creó la función, sino al contexto en que fue invocada** (_salvo que usemos arrow functions_) **es decir, desde dónde la estamos llamando**
 - Cuando la función es un método de un objeto, `this` hace referencia al objeto a la izquierda del `.`
