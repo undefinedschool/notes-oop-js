@@ -23,6 +23,7 @@
 - [`new` vs `Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-vs-objectcreate)
 - [`bind`](https://github.com/undefinedschool/oop-js/blob/master/README.md#bind)
 - [El problema que tenemos al usar `this`](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-problema-que-tenemos-al-usar-this)
+  - [Cómo forzar el valor de `this`](https://github.com/undefinedschool/oop-js/blob/master/README.md#c%C3%B3mo-forzar-el-valor-de-this)
 - [`Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#class)
   - [Herencia con `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#herencia-con-class)
   - [`Class` behind the scenes](https://github.com/undefinedschool/oop-js/blob/master/README.md#class-behind-the-scenes)
@@ -165,7 +166,7 @@ aTeletubbie.currentPosition;
 
 ![](https://i.imgur.com/INMK9IM.png)
 
-### Prototype
+## Prototype
 
 - :warning: **Problema:** las propiedades pueden tomar valores únicos, pero en el caso de los métodos, estamos repitiendo las mismas funciones una y otra vez, para cada objeto (y rompiendo el principio _DRY_).
 
@@ -226,7 +227,7 @@ koala.__proto__
 koala.__proto__ === Object.prototype
 ```
 
-#### Ejercicio
+### Ejercicio
 
 Ejecutar el siguiente código en la consola y analizar qué pasa y por qué
 
@@ -267,7 +268,7 @@ arr.push(1);
 
 - [delete operator - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 
-### Las funciones son funciones... y objetos
+## Las funciones son funciones... y objetos
 
 - Recordemos que las funciones son _First-Class citizens_
 - Por lo tanto podemos tratarlas como cualquier otro valor, por ejemplo pasarlas por parámetro o retornarlas desde otra función
@@ -283,7 +284,7 @@ console.log(sum(2, 6));
 
 - [Function - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
 
-#### Combo función-objeto
+### Combo función-objeto
 
 - Todas las funciones en JavaScript tienen por default una propiedad llamada `prototype` en su 'versión objeto'
   - Esta propiedad contiene incialmente un objeto "vacío", sin propiedades propias
@@ -305,9 +306,9 @@ multiplyBy2.stored; // 5
 multiplyBy2.prototype; // {}
 ```
 
-### _Factory Function_ vs `constructor`
+## _Factory Function_ vs `constructor`
 
-#### _Factory Function_
+### _Factory Function_
 
 - En JavaScript, cualquier función puede retornar un objeto. Cuando no es una función consteructora o _clase_, la llamamos _Factory Function_
 
@@ -326,7 +327,7 @@ function Person(firstName, lastName, age) {
 const person = Person('Dare', 'Devil', 32);
 ```
 
-#### `constructor`
+### `constructor`
 
 - Por convención, se utiliza siempre la primer letra del nombre de la función en mayúscula para indicar que es una función constructora
 - Se invocan utilizando la keyword `new`
@@ -341,6 +342,8 @@ function Person(firstName, lastName, age) {
 
 const person = new Person('Dare', 'Devil', 32);
 ```
+
+## Creación de objetos
 
 ### `Object.create`
 
@@ -425,7 +428,7 @@ const anotherObject = Object.create(x) // prototipo de anotherObject: x
 const newObject = new SomeConstructor(); // => prototipo de newObject: SomeConstructor.prototype
 ```
 
-### `bind`
+## `bind`
 
 ```js
 const kittie = {
@@ -500,7 +503,7 @@ user.info();
 - Usando `bind` hacemos explícito el contexto
 - Más info: [`bind` - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 
-### El problema que tenemos al usar `this`
+## El problema que tenemos al usar `this`
 
 - Las funciones pueden tener 2 tipos de parámetros: _explícitos_ (los que definimos nosotros) e _implícitos_. Estos últimos son parámetros que las funcionen tienen y nosotros no definimos
 
@@ -708,9 +711,9 @@ const video = {
 video.showTags();
 ```
 
-### Class
+## Class
 
-#### `Prototype` version vs `Class` version
+### `Prototype` version vs `Class` version
 
 ```js
 function User(email, name) {
@@ -779,7 +782,7 @@ console.dir(User.prototype);
 console.log(userOne.__proto__ === User.prototype);
 ```
 
-#### Herencia con `Class`
+### Herencia con `Class`
 
 ```js
 class Mammal {
@@ -995,7 +998,7 @@ console.log(ken);
 ryu.login();
 ```
 
-### Polimorfismo
+## Polimorfismo
 
 - La palabra viene del griego _poli_ (muchos) y _morfo_ (forma), muchas formas
 - **Definición formal:** propiedad que nos **permite enviar mensajes sintácticamente iguales (es decir, que se llaman igual y toman los mismos parámetros) a objetos de tipos distintos**. El único requisito que deben cumplir los objetos que se utilizan de manera polimórfica es saber responder al mensaje que se les envía
@@ -1004,9 +1007,9 @@ ryu.login();
 - Propiedad que nos permite tratar de la misma forma a objetos de tipos diferentes
 - Cuando hablamos de _objetos de diferentes tipos_ en el contexto de _polimorfismo_, nos referimos a objetos cuyos prototipos son diferentes ó que son (con muchas comillas) _'instancias'_ de diferentes _'clases'_
 
-#### Usando prototipos
+### Usando prototipos
 
-##### Estableciendo la herencia
+#### Estableciendo la herencia
 
 ```js
 const User = {
@@ -1036,7 +1039,7 @@ const newUsers = [Student, Professor];
 newUsers.forEach(user => user.sayHello())
 ```
 
-##### Sobreescribiendo métodos del prototipo
+#### Sobreescribiendo métodos del prototipo
 
 ```js
 const User = {
@@ -1072,7 +1075,7 @@ const newUsers = [Student, Professor];
 newUsers.forEach(user => user.describe())
 ```
 
-#### Usando  `Class`
+### Usando  `Class`
 
 ```js
 class Animal {
@@ -1123,9 +1126,9 @@ cat.makeSound();
 - **Herencia:** un objeto puede acceder y utilizar propiedades/métodos definidos en su prototipo, o en el prototipo de su prototipo, etc, lo que llamamos su _Prototype Chain_. Básicamente es una transferencia de propiedades entre objetos, de _'arriba' hacia 'abajo'_ en la cadena. **Es el mecanismo para reutilizar código que nos brinda el paradigma.**
 - **Polimorfismo:** propiedad que permite que objetos de diferentes tipos o 'clases' puedan responder a los mismos mensajes/métodos. Esto se logra sobreescribiendo un método de una clase en una subclase y nos permite _tratar de la misma forma a objetos de tipos diferentes_
 
-### :question: **Bonus: Cómo hacemos para clonar un objeto?**
+## :question: **Bonus: Cómo hacemos para clonar un objeto?**
 
-#### Solución 1
+### Solución 1
 
 ```js
 // iterando las keys del objeto original y agregándolas con sus valores a la copia
@@ -1143,7 +1146,7 @@ for (key in circle) {
 }
 ```
 
-#### Solución 2
+### Solución 2
 
 ```js
 // the ninja way
