@@ -698,6 +698,22 @@ const video = {
 video.showTags();
 ```
 
+#### Miremos el valor de `this`... 🤔
+
+```js
+const video = {
+  title: 'V/H/S',
+  tags: ['horror', 'indie', 'thriller'],
+  showTags() {
+    this.tags.forEach(function(tag) {
+      console.log(this, tag);
+    })
+  }
+}
+
+video.showTags();
+```
+
 #### Qué pasa si usamos _arrow functions_? 🤔
 
 ```js
