@@ -1195,6 +1195,19 @@ for (key in circle) {
 ### Solución 2
 
 ```js
+const circle = {
+  radius: 1,
+  draw() {
+    console.log('draw');
+  }
+}
+
+const circleClone = Object.assign({}, circle);
+```
+
+### Solución 3
+
+```js
 // the ninja way
 const circle = {
   radius: 1,
