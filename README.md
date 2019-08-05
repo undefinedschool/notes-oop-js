@@ -1163,6 +1163,63 @@ dog.makeSound();
 cat.makeSound();
 ```
 
+## _Getters_ & _Setters_
+
+```js
+const person = {
+  firstName: 'Aquiles',
+  lastName: 'Bailoyo',
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`
+  }
+};
+
+console.log(person.getFullName());
+```
+
+- *Contras de usar este approach:*
+  1. una vez creado el objeto, sus propiedades `firstName`y `lastName` son _read-only_ (sólo lectura), no podemos modificar el valor
+  2. tenemos que utilizar un _método_ para algo que tal vez estaría bueno tener como el valor de una _propiedad_ común
+
+### Usando `get`
+
+```js
+const person = {
+  firstName: 'Aquiles',
+  lastName: 'Bailoyo',
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`
+  }
+};
+
+console.log(person.fullName);
+```
+
+### Usando `get`
+
+```js
+const person = {
+  firstName: 'Aquiles',
+  lastName: 'Bailoyo',
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`
+  },
+  set fullName(name) {
+    const fullName = name.split(' ');
+    this.firstName = fullName[0];
+    this.lastName = fullName[1];
+  }
+};
+
+// usando el _setter_
+person.fullName = 'Armando Paredes';
+// usando el _getter_
+console.log(person.fullName);
+```
+
+- Usamos _getters_ para _acceder/obtener_ al valor de una propiedad
+- Usamos _setters_ para _setear/modificar/mutar_ el valor de una propiedad
+
 ## POO: Conceptos fundamentales explicados brevemente
 
 - **Objeto:** colección de datos/funcionalidades relacionados (variables y funciones), que llamamos _propiedades_
