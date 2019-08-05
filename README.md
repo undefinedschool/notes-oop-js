@@ -1196,7 +1196,7 @@ const person = {
 console.log(person.fullName);
 ```
 
-### Usando `get`
+### Usando `get` y `set`
 
 ```js
 const person = {
@@ -1209,6 +1209,7 @@ const person = {
     const fullName = name.split(' ');
     this.firstName = fullName[0];
     this.lastName = fullName[1];
+    console.info(`${name} has been set as person's full name.`)
   }
 };
 
@@ -1218,6 +1219,10 @@ person.fullName = 'Armando Paredes';
 console.log(person.fullName);
 ```
 
+### tl;dr
+
+- Los _getters_ y _setters_ son _métodos_ definidos en un objeto o clase, que se ven y utilizamos "como si fueran propiedades"
+- La idea es que accedamos y modifiquemos propiedades del objeto _de forma segura y controlada_, a través de los _getters_ y _setters_
 - Usamos _getters_ para _acceder/obtener_ al valor de una propiedad
 - Usamos _setters_ para _setear/modificar/mutar_ el valor de una propiedad
 
@@ -1282,6 +1287,10 @@ const circleClone = {...circle};
 - [Working with Objects - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 - [Inheritance and the prototype chain - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [Details_of_the_Object_Model - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+
+### Libro recomendado sobre OOP en JS
+
+- [The Principles Of Object-oriented Javascript](https://www.bookdepository.com/Principles-Object-oriented-Javascript-Nicholas-C-Zakas/9781593275402/?a_aid=nhsz)
 
 ## :star: Conclusión
 
