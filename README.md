@@ -406,9 +406,10 @@ const userFunctionStore = {
   }
 }
 
-// creamos nuevos objetos
+// creamo un nuevo objeto
 const user1 = UserCreator('Sarah Connor', 7);
-const user2 = UserCreator('John Connor', 4);
+// interactuamos con el objeto a través de sus métodos
+user1.login();
 ```
 
 - `new` automatiza todo este proceso
