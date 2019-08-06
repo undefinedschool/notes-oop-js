@@ -13,6 +13,7 @@
 - [POO](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo)
 - [Prototype](https://github.com/undefinedschool/oop-js/blob/master/README.md#prototype)
   - [Herencia basada en prototipos (_Prototypal Inheritance_)](https://github.com/undefinedschool/oop-js/blob/master/README.md#herencia-basada-en-prototipos-prototypal-inheritance)
+  - [Otro ejemplo de herencia basada en prototipos](https://github.com/undefinedschool/oop-js/blob/master/README.md#otro-ejemplo-de-herencia-basada-en-prototipos)
 - [Las funciones son funciones... y objetos
 ](https://github.com/undefinedschool/oop-js/blob/master/README.md#las-funciones-son-funciones-y-objetos)
 - [_Factory Function_ vs `constructor`](https://github.com/undefinedschool/oop-js/blob/master/README.md#factory-function-vs-constructor)
