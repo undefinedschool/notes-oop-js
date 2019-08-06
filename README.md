@@ -958,7 +958,7 @@ const ultraBall = new PokeBall(3, 'black');
 console.dir(PokeBall);
 ```
 
-#### Otro ejemplo de herencia basada en prototipos
+#### Otro ejemplo de herencia basada en prototipos (`extends` & _subclass_ behind the scenes)
 
 ```js
 function UserCreator(name, score) {
