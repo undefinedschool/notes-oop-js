@@ -1006,6 +1006,11 @@ const paidUser = paidUserCreator('Alyssa', 8, 25);
 // invocamos métodos del nuevo objeto pago
 paidUser.login()
 paidUser.increaseBalance();
+
+console.dir(user);
+console.dir(paidUser);
+console.dir(user.__proto__);
+console.dir(paidUser.__proto__);
 ```
 
 - Usamos la ya conocida _Prototype Chain_
