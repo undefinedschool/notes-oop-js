@@ -399,8 +399,7 @@ function UserCreator(name, score) {
 const userFunctionStore = {
   increment() {
     this.score++;
-  }
-
+  },
   login() {
     console.log('You have logged in');
   }
