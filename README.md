@@ -387,7 +387,7 @@ cat.talk();
 ```js
 function UserCreator(name, score) {
   // creamos un objeto vacío y lo enlazamos con su prototipo seteando su popiedad oculta __proto__
-  const newUser = Object.create(userFunctionStore);
+  const newUser = Object.create(userFunctions);
   // seteamos sus propiedades
   newUser.name = name;
   newUser.score = score;
@@ -395,8 +395,8 @@ function UserCreator(name, score) {
   return newUser;
 }
 
-// `prototype`. El objeto nuevo va a heredear estas propiedades
-const userFunctionStore = {
+// `prototype`: el objeto nuevo va a heredar estas propiedades
+const userFunctions = {
   increment() {
     this.score++;
   },
@@ -405,10 +405,10 @@ const userFunctionStore = {
   }
 }
 
-// creamo un nuevo objeto
-const user1 = UserCreator('Sarah Connor', 7);
-// interactuamos con el objeto a través de sus métodos
-user1.login();
+// creamos un nuevo usuario
+const user = UserCreator('Sarah Connor', 7);
+// interactuamos con el usuario a través de sus métodos
+user.login();
 ```
 
 - `new` automatiza todo este proceso
@@ -955,6 +955,56 @@ const ultraBall = new PokeBall(3, 'black');
 
 // ver las propiedades de la función/objeto constructora
 console.dir(PokeBall);
+```
+
+#### Otro ejemplo de herencia basada en prototipos
+
+```js
+function UserCreator(name, score) {
+  // creamos un objeto vacío y lo enlazamos con su prototipo seteando su popiedad oculta __proto__
+  const newUser = Object.create(userFunctions);
+  // seteamos sus propiedades
+  newUser.name = name;
+  newUser.score = score;
+  
+  return newUser;
+}
+
+// `prototype`: el objeto nuevo va a heredar estas propiedades
+const userFunctions = {
+  increment() {
+    this.score++;
+  },
+  login() {
+    console.log(`${this.name} has logged in`);
+  }
+}
+
+function paidUserCreator(paidName, paidScore, accountBalance) {
+  const newPaidUser = UserCreator(paidName, paidScore);
+  Object.setPrototypeOf(newPaidUser, paidUserFunctions);
+  newPaidUser.accountBalance = accountBalance;
+
+  return newPaidUser;
+}
+
+const paidUserFunctions = {
+  increaseBalance() {
+    this.accountBalance++;
+  }
+};
+
+// creamos un nuevo usuario normal
+const user = UserCreator('Sarah Connor', 7);
+// interactuamos con el objeto a través de sus métodos
+user.login();
+// establecemos la cadena de prototipos
+Object.setPrototypeOf(paidUserFunctions, userFunctions);
+// creamos un nuevo usuario pago
+const paidUser = paidUserCreator('Alyssa', 8, 25);
+// invocamos métodos del nuevo objeto pago
+paidUser.login()
+paidUser.increaseBalance();
 ```
 
 - Usamos la ya conocida _Prototype Chain_
