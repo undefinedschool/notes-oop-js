@@ -769,9 +769,9 @@ video.showTags();
 #### :star: _Modos_
 
 - Como truco, podemos hacer una analogía con los modos de las cámaras de fotos: `this` tiene 3 modos, _`auto`_, _`semi`_ y _`manual`_. 
-  - en modo _`auto`_, el valor de `this` se setea automáticamente según el contexto (ver ítems [_1, 2 y 3_](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores))
-  - en modo _`semi`_, tenemos algo de control sobre el valor de `this`, aunque se define de forma _implícita_, utilizando _arrow functions_ (ver ítem [_4_](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores))
-  - en modo _`manual`_, tenemos todo el control y nosotros definimos _explícitamente_ el valor de `this` (ver ítems [_5 y 6_](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores))
+  - _`auto`_: el valor de `this` se setea automáticamente según el contexto (ver ítems [_1, 2 y 3_](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores))
+  - _`semi`_: tenemos algo de control sobre el valor de `this`, aunque se define de forma _implícita_, utilizando _arrow functions_ (ver ítem [_4_](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores))
+  - _`manual`_: tenemos todo el control y nosotros definimos _explícitamente_ el valor de `this` (ver ítems [_5 y 6_](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores))
 
 ## Class
 
