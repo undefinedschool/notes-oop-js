@@ -757,8 +757,14 @@ video.showTags();
   1. si es una función común y corriente, `this` hace referencia al _contexto global_ (`Window` en el browser, `global` en Node)
   2. si es un método `m` de un objeto `x` y lo invocamos como `x.m()`, `this` hace referencia al objeto `x`
   3. si utilizamos una función constructora, que invocamos usando la keyword `new`, `this` hace referencia al nuevo objeto que creamos
-  4. hay métodos que tienen un [parámetro opcional](https://github.com/undefinedschool/oop-js/blob/master/README.md#bonus-algunos-m%C3%A9todos-tienen-un-this-como-par%C3%A1metro-opcional) para setear el valor de `this`, por ejemplo algunos de _Array_
-  5. en el caso de ser necesario, podemos forzar el valor de `this` de [diversas formas](https://github.com/undefinedschool/oop-js/blob/master/README.md#c%C3%B3mo-forzar-el-valor-de-this)
+  4. si usamos _arrow functions_, el valor de `this` está definido por lo que llamamos _lexical scope_, es decir, `this` mantiene el valor que tenía en **el lugar donde definimos la función**
+  5. hay métodos que tienen un [parámetro opcional](https://github.com/undefinedschool/oop-js/blob/master/README.md#bonus-algunos-m%C3%A9todos-tienen-un-this-como-par%C3%A1metro-opcional) para setear el valor de `this`, por ejemplo algunos de _Array_
+  6. en el caso de ser necesario, podemos forzar el valor de `this` de [diversas formas](https://github.com/undefinedschool/oop-js/blob/master/README.md#c%C3%B3mo-forzar-el-valor-de-this)
+
+- :star: Como truco, podemos hacer una analogía con los modos de las cámaras de fotos: `this` tiene 3 modos, _`auto`_, _`semi`_ y _`manual`_. 
+  - en modo _`auto`_, el valor de `this` se setea automáticamente según el contexto (ver ítems 1, 2 y 3 de []())
+  - en modo _`semi`_, tenemos algo de control sobre el valor de `this`, aunque se define de forma _implícita_, utilizando _arrow functions_ (ver ítem 4 de []())
+  - en modo _`manual`_, tenemos todo el control y nosotros definimos _explícitamente_ el valor de `this` (ver ítems 5 y 6 de []())
 
 ## Class
 
