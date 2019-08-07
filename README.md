@@ -27,6 +27,9 @@
 - [El problema que tenemos al usar `this`](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-problema-que-tenemos-al-usar-this)
   - [Cómo forzar el valor de `this`](https://github.com/undefinedschool/oop-js/blob/master/README.md#c%C3%B3mo-forzar-el-valor-de-this)
   - [tl;dr Cómo saber el valor de `this`](https://github.com/undefinedschool/oop-js/blob/master/README.md#tldr-c%C3%B3mo-saber-el-valor-de-this)
+    - [`this` es...](https://github.com/undefinedschool/oop-js/blob/master/README.md#this-es)
+    - [El valor de `this` depende de varios factores...](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores)
+    - [_Modos_](https://github.com/undefinedschool/oop-js/blob/master/README.md#star-modos)
 - [`Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#class)
   - [Herencia con `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#herencia-con-class)
   - [`Class` behind the scenes](https://github.com/undefinedschool/oop-js/blob/master/README.md#class-behind-the-scenes)
@@ -766,9 +769,9 @@ video.showTags();
 #### :star: _Modos_
 
 - Como truco, podemos hacer una analogía con los modos de las cámaras de fotos: `this` tiene 3 modos, _`auto`_, _`semi`_ y _`manual`_. 
-  - en modo _`auto`_, el valor de `this` se setea automáticamente según el contexto (ver ítems 1, 2 y 3 de []())
-  - en modo _`semi`_, tenemos algo de control sobre el valor de `this`, aunque se define de forma _implícita_, utilizando _arrow functions_ (ver ítem 4 de []())
-  - en modo _`manual`_, tenemos todo el control y nosotros definimos _explícitamente_ el valor de `this` (ver ítems 5 y 6 de []())
+  - en modo _`auto`_, el valor de `this` se setea automáticamente según el contexto (ver ítems [_1, 2 y 3_](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores))
+  - en modo _`semi`_, tenemos algo de control sobre el valor de `this`, aunque se define de forma _implícita_, utilizando _arrow functions_ (ver ítem [_4_](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores))
+  - en modo _`manual`_, tenemos todo el control y nosotros definimos _explícitamente_ el valor de `this` (ver ítems [_5 y 6_](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores))
 
 ## Class
 
