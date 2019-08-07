@@ -762,7 +762,7 @@ video.showTags();
 1. si es una función común y corriente, `this` hace referencia al _contexto global_ (`Window` en el browser, `global` en Node)
 2. si es un método `m` de un objeto `x` y lo invocamos como `x.m()`, `this` hace referencia al objeto `x`
 3. si utilizamos una función constructora, que invocamos usando la keyword `new`, `this` hace referencia al nuevo objeto que creamos
-4. si usamos _arrow functions_, el valor de `this` está definido por lo que llamamos _lexical scope_, es decir, `this` mantiene el valor que tenía en **el lugar donde definimos la función**
+4. si usamos _arrow functions_, el valor de `this` está definido por lo que llamamos _lexical scope_, es decir, `this` **mantiene el valor que tenía en el lugar donde definimos la función, no se crea un _nuevo contexto_**
 5. hay métodos que tienen un [parámetro opcional](https://github.com/undefinedschool/oop-js/blob/master/README.md#bonus-algunos-m%C3%A9todos-tienen-un-this-como-par%C3%A1metro-opcional) para setear el valor de `this`, por ejemplo algunos de _Array_
 6. en el caso de ser necesario, podemos forzar el valor de `this` de [diversas formas](https://github.com/undefinedschool/oop-js/blob/master/README.md#c%C3%B3mo-forzar-el-valor-de-this)
 
