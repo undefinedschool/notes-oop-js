@@ -39,6 +39,7 @@
   - [Usando prototipos](https://github.com/undefinedschool/oop-js/blob/master/README.md#usando-prototipos)
   - [Usando `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#usando--class)
 - [_Getters_ & _Setters_](https://github.com/undefinedschool/oop-js/blob/master/README.md#getters--setters)
+- [Métodos _estáticos_]()
 - [POO: Conceptos fundamentales explicados brevemente](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo-conceptos-fundamentales-explicados-brevemente)
 - [Bonus: Cómo hacemos para clonar un objeto?](https://github.com/undefinedschool/oop-js/blob/master/README.md#question-c%C3%B3mo-hacemos-para-clonar-un-objeto)
 - [Para seguir aprendiendo...](https://github.com/undefinedschool/oop-js/blob/master/README.md#para-seguir-aprendiendo)
@@ -1341,6 +1342,39 @@ console.log(person.fullName);
 - La idea es que accedamos y modifiquemos propiedades del objeto _de forma segura y controlada_, a través de los _getters_ y _setters_
 - Usamos _getters_ para _acceder/obtener_ al valor de una propiedad
 - Usamos _setters_ para _setear/modificar/mutar_ el valor de una propiedad
+
+## Métodos _estáticos_
+
+- Son métodos que se definen dentro de una _clase_ y podemos utilizar sin necesidad de _instanciarla_ (crear un objeto a partir de esta clase)
+- Se invocan con la sintaxis `Clase.método()`
+- Se suelen utilizar como _métodos utilitarios_ para funcionalidad y operaciones que no tienen que ver directamente con el comportamiento de los objetos
+
+```js
+class Square {
+  constructor(width) {
+    this._width = width;
+    this._height = width;
+  }
+
+  get area() {
+    return this._width ** 2;
+  }
+
+  set area(newArea) {
+    this._width = Math.sqrt(newArea);
+    this._height = Math.sqrt(newArea);
+  }
+  
+  static isEqual(aSquare, anotherSquare) {
+    return aSquare.area === anotherSquare.area;
+  }
+}
+
+const squareA = new Square(5);
+const squareB = new Square(7);
+
+console.log(Square.isEqual(squareA, squareB));
+```
 
 ## POO: Conceptos fundamentales explicados brevemente
 
