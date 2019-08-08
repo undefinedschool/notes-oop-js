@@ -702,6 +702,7 @@ obj.arrowFn();
 
 - `normalFn` es una _función común_ que invocamos como _método de un objeto_, por eso el valor de `this` pasa a ser el objeto, pero `arrowFn` es una _arrow function_ y el valor de `this` al momento de definirla era `global`
 - Por eso es recomendable usar _arrow functions_ para los _callbacks_ y funciones comunes para definir métodos
+- [Tampoco podemos forzar el valor de `this`](https://www.youtube.com/watch?v=mBwwfts6af4) en una _arrow function_
 
 ### Bonus: algunos métodos tienen un `this` como parámetro opcional...
 
