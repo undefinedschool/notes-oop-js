@@ -685,6 +685,23 @@ user.increment();
   - Esto es lo que se conoce como _lexical scoping_
 - Además de [bind](https://github.com/undefinedschool/oop-js/blob/master/README.md#bind), podemos utilizar otros métodos similares como [`call`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) y [`apply`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) para _tomar el control_ y setear manualmente el valor que se le asigna a `this`
 
+### :warning: Ojo con el `this` y las _arrow functions_!
+
+```js
+const obj = {
+  normalFn() {
+    console.log(this);
+  },
+  arrowFn: () => console.log(this)
+}
+
+obj.normalFn();
+obj.arrowFn();
+```
+
+- `normalFn` es una _función común_ que invocamos como _método de un objeto_, por eso el valor de `this` pasa a ser el objeto, pero `arrowFn` es una _arrow function_ y el valor de `this` al momento de definirla era `global`
+- Por eso es recomendable usar _arrow functions_ para los _callbacks_ y funciones comunes para definir métodos
+
 ### Bonus: algunos métodos tienen un `this` como parámetro opcional...
 
 - Se acuerdan, por ejemplo del parámetro opcional [`thisArg`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Parameters) del `forEach`?
