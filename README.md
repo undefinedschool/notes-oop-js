@@ -39,7 +39,7 @@
   - [Usando prototipos](https://github.com/undefinedschool/oop-js/blob/master/README.md#usando-prototipos)
   - [Usando `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#usando--class)
 - [_Getters_ & _Setters_](https://github.com/undefinedschool/oop-js/blob/master/README.md#getters--setters)
-- [Métodos _estáticos_]()
+- [Métodos _estáticos_](https://github.com/undefinedschool/oop-js/blob/master/README.md#m%C3%A9todos-est%C3%A1ticos)
 - [POO: Conceptos fundamentales explicados brevemente](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo-conceptos-fundamentales-explicados-brevemente)
 - [Bonus: Cómo hacemos para clonar un objeto?](https://github.com/undefinedschool/oop-js/blob/master/README.md#question-c%C3%B3mo-hacemos-para-clonar-un-objeto)
 - [Para seguir aprendiendo...](https://github.com/undefinedschool/oop-js/blob/master/README.md#para-seguir-aprendiendo)
@@ -1374,6 +1374,9 @@ const squareA = new Square(5);
 const squareB = new Square(7);
 
 console.log(Square.isEqual(squareA, squareB));
+
+const squareC = new Square(5);
+console.log(Square.isEqual(squareA, squareC));
 ```
 
 ## POO: Conceptos fundamentales explicados brevemente
