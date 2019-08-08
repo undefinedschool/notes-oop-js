@@ -18,6 +18,7 @@
 ](https://github.com/undefinedschool/oop-js/blob/master/README.md#las-funciones-son-funciones-y-objetos)
 - [_Factory Function_ vs `constructor`](https://github.com/undefinedschool/oop-js/blob/master/README.md#factory-function-vs-constructor)
   - [Combo función-objeto](https://github.com/undefinedschool/oop-js/blob/master/README.md#combo-funci%C3%B3n-objeto)
+- [`isPrototypeOf` & `instanceof`](https://github.com/undefinedschool/oop-js/blob/master/README.md#isprototypeof--instanceof)
 - [Creación de objetos](https://github.com/undefinedschool/oop-js#creaci%C3%B3n-de-objetos)
   - [`Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#objectcreate)
   - [`new` keyword](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-keyword)
