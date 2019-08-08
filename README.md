@@ -375,7 +375,7 @@ console.log(professorX instanceof Professor);
 ```
 
 - `isPrototypeOf`: sirve para chequear si un objeto es prototipo de otro ó es la _clase_ que se usó para crearlo
-- `instanceof`: sirve para chequear si un objeto fue creado a partir de una determinada _función constructora_ o _clase_
+- `instanceof`: sirve para chequear si un objeto fue creado a partir de una determinada _función constructora_ o _clase_; un _objeto_ creado por un _constructor_ es una _instancia_ de ese _constructor_
 
 ## Creación de objetos
 
