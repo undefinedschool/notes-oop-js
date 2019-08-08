@@ -30,7 +30,7 @@
     - [`this` es...](https://github.com/undefinedschool/oop-js/blob/master/README.md#this-es)
     - [El valor de `this` depende de varios factores...](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores)
     - [_Modos_](https://github.com/undefinedschool/oop-js/blob/master/README.md#star-modos)
-  - [Ojo con `this`, los métodos y las _arrow functions_!]()
+  - [:warning: Ojo con `this`, los métodos y las _arrow functions_!](https://github.com/undefinedschool/oop-js/blob/master/README.md#warning-ojo-con-this-los-m%C3%A9todos-y-las-arrow-functions)
 - [`Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#class)
   - [Herencia con `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#herencia-con-class)
   - [`Class` behind the scenes](https://github.com/undefinedschool/oop-js/blob/master/README.md#class-behind-the-scenes)
