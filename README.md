@@ -42,7 +42,7 @@
 - [POO: Conceptos fundamentales explicados brevemente](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo-conceptos-fundamentales-explicados-brevemente)
 - [Bonus: Cómo hacemos para clonar un objeto?](https://github.com/undefinedschool/oop-js/blob/master/README.md#question-c%C3%B3mo-hacemos-para-clonar-un-objeto)
 - [Para seguir aprendiendo...](https://github.com/undefinedschool/oop-js/blob/master/README.md#para-seguir-aprendiendo)
-- [📚 Libro recomendado sobre OOP en JS](https://github.com/undefinedschool/oop-js/#libro-recomendado-sobre-oop-en-js)
+- [📚 Libros recomendados sobre OOP en JS](https://github.com/undefinedschool/oop-js/#libro-recomendado-sobre-oop-en-js)
 - [Conclusión](https://github.com/undefinedschool/oop-js/blob/master/README.md#conclusi%C3%B3n)
 
 ```js
@@ -1404,9 +1404,11 @@ const circleClone = {...circle};
 - [Inheritance and the prototype chain - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - [Details_of_the_Object_Model - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
 
-## 📚 Libro recomendado sobre OOP en JS
+## 📚 Libros recomendados sobre OOP en JS
 
 - [The Principles Of Object-oriented Javascript](https://www.bookdepository.com/Principles-Object-oriented-Javascript-Nicholas-C-Zakas/9781593275402/?a_aid=nhsz)
+- [https://www.bookdepository.com/Learning-JavaScript-Design-Patterns-Addy-Osmani/9781449331818/?a_aid=nhsz](Learning JavaScript Design Patterns)
+- [Design Patterns : Elements of Reusable Object-Oriented Software](https://www.bookdepository.com/Design-Patterns-Erich-Gamma/9780201633610/?a_aid=nhsz)
 
 ## :star: Conclusión
 
