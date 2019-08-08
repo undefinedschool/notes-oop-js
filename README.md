@@ -30,6 +30,7 @@
     - [`this` es...](https://github.com/undefinedschool/oop-js/blob/master/README.md#this-es)
     - [El valor de `this` depende de varios factores...](https://github.com/undefinedschool/oop-js/blob/master/README.md#el-valor-de-this-depende-de-varios-factores)
     - [_Modos_](https://github.com/undefinedschool/oop-js/blob/master/README.md#star-modos)
+  - [Ojo con `this`, los métodos y las _arrow functions_!]()
 - [`Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#class)
   - [Herencia con `Class`](https://github.com/undefinedschool/oop-js/blob/master/README.md#herencia-con-class)
   - [`Class` behind the scenes](https://github.com/undefinedschool/oop-js/blob/master/README.md#class-behind-the-scenes)
@@ -685,7 +686,7 @@ user.increment();
   - Esto es lo que se conoce como _lexical scoping_
 - Además de [bind](https://github.com/undefinedschool/oop-js/blob/master/README.md#bind), podemos utilizar otros métodos similares como [`call`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) y [`apply`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) para _tomar el control_ y setear manualmente el valor que se le asigna a `this`
 
-### :warning: Ojo con el `this` y las _arrow functions_!
+### :warning: Ojo con `this`, los métodos y las _arrow functions_!
 
 ```js
 const obj = {
