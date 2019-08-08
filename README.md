@@ -1346,6 +1346,7 @@ console.log(person.fullName);
 ## Métodos _estáticos_
 
 - Son métodos que se definen dentro de una _clase_ y podemos utilizar sin necesidad de _instanciarla_ (crear un objeto a partir de esta clase)
+- No son métodos que accedemos y utilizamos directamente desde una _instancia_ (objeto)
 - Se invocan con la sintaxis `Clase.método()`
 - Se suelen utilizar como _métodos utilitarios_ para funcionalidad y operaciones que no tienen que ver directamente con el comportamiento de los objetos
 
