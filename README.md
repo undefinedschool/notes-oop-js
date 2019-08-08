@@ -43,7 +43,7 @@
 - [POO: Conceptos fundamentales explicados brevemente](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo-conceptos-fundamentales-explicados-brevemente)
 - [Bonus: Cómo hacemos para clonar un objeto?](https://github.com/undefinedschool/oop-js/blob/master/README.md#question-c%C3%B3mo-hacemos-para-clonar-un-objeto)
 - [Para seguir aprendiendo...](https://github.com/undefinedschool/oop-js/blob/master/README.md#para-seguir-aprendiendo)
-- [📚 Libros recomendados sobre OOP en JS](https://github.com/undefinedschool/oop-js/#libro-recomendado-sobre-oop-en-js)
+- [📚 Libros recomendados sobre OOP en JS](https://github.com/undefinedschool/oop-js/#libros-recomendado-sobre-oop-en-js)
 - [Conclusión](https://github.com/undefinedschool/oop-js/blob/master/README.md#conclusi%C3%B3n)
 
 ```js
