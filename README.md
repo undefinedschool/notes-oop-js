@@ -1446,7 +1446,7 @@ const circleClone = {...circle};
 ## 📚 Libros recomendados sobre OOP en JS
 
 - [The Principles Of Object-oriented Javascript](https://www.bookdepository.com/Principles-Object-oriented-Javascript-Nicholas-C-Zakas/9781593275402/?a_aid=nhsz)
-- [https://www.bookdepository.com/Learning-JavaScript-Design-Patterns-Addy-Osmani/9781449331818/?a_aid=nhsz](Learning JavaScript Design Patterns)
+- [Learning JavaScript Design Patterns](https://www.bookdepository.com/Learning-JavaScript-Design-Patterns-Addy-Osmani/9781449331818/?a_aid=nhsz)
 - [Design Patterns : Elements of Reusable Object-Oriented Software](https://www.bookdepository.com/Design-Patterns-Erich-Gamma/9780201633610/?a_aid=nhsz)
 
 ## :star: Conclusión
