@@ -352,6 +352,30 @@ function Person(firstName, lastName, age) {
 const person = new Person('Dare', 'Devil', 32);
 ```
 
+## `isPrototypeOf` & `instanceof`
+
+```js
+function Professor(name, teaching, subjects) {
+  this.name = name;
+  this.isTeaching = teaching;
+  this.subjects = subjects;
+}
+
+Professor.prototype = {
+  showSubjects() {
+    console.log(this.subjects);
+  }
+}
+
+const professorX = new Professor('Charles Xavier', true, ['telepathy', 'leadership']);
+
+console.log(Professor.prototype.isPrototypeOf(professorX));
+console.log(professorX instanceof Professor);
+```
+
+- `isPrototypeOf`: sirve para chequear si un objeto es prototipo de otro ó es la _clase_ que se usó para crearlo
+- `isinstanceof`: sirve para chequear si un objeto fue creado a partir de una determinada _función constructora_ o _clase_
+
 ## Creación de objetos
 
 ### `Object.create`
