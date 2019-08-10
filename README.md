@@ -41,7 +41,9 @@
 - [_Getters_ & _Setters_](https://github.com/undefinedschool/oop-js/blob/master/README.md#getters--setters)
 - [Métodos _estáticos_](https://github.com/undefinedschool/oop-js/blob/master/README.md#m%C3%A9todos-est%C3%A1ticos)
 - [POO: Conceptos fundamentales explicados brevemente](https://github.com/undefinedschool/oop-js/blob/master/README.md#poo-conceptos-fundamentales-explicados-brevemente)
-- [Bonus: Cómo hacemos para clonar un objeto?](https://github.com/undefinedschool/oop-js/blob/master/README.md#question-c%C3%B3mo-hacemos-para-clonar-un-objeto)
+- [:fireworks: Bonus]()
+  - [:question: Cómo hacemos para iterar sobre las propiedades de un objeto?]()
+  - [:question: Cómo hacemos para clonar un objeto?]()
 - [Para seguir aprendiendo...](https://github.com/undefinedschool/oop-js/blob/master/README.md#para-seguir-aprendiendo)
 - [📚 Libros recomendados sobre OOP en JS](https://github.com/undefinedschool/oop-js/#-libros-recomendados-sobre-oop-en-js)
 - [Conclusión](https://github.com/undefinedschool/oop-js/blob/master/README.md#conclusi%C3%B3n)
@@ -1392,7 +1394,29 @@ console.log(Square.isEqual(squareA, squareC));
 - **Herencia:** un objeto puede acceder y utilizar propiedades/métodos definidos en su prototipo, o en el prototipo de su prototipo, etc, lo que llamamos su _Prototype Chain_. Básicamente es una transferencia de propiedades entre objetos, de _'arriba' hacia 'abajo'_ en la cadena. **Es el mecanismo para reutilizar código que nos brinda el paradigma.**
 - **Polimorfismo:** propiedad que permite que objetos de diferentes tipos o 'clases' puedan responder a los mismos mensajes/métodos. Esto se logra sobreescribiendo un método de una clase en una subclase y nos permite _tratar de la misma forma a objetos de tipos diferentes_
 
-## :question: **Bonus: Cómo hacemos para clonar un objeto?**
+## :fireworks: Bonus
+
+### :question: Cómo hacemos para iterar sobre las propiedades de un objeto?
+
+#### 1. Iterar sobre _todas_ las propiedades del objeto, incluyendo las que hereda de su _prototipo_
+
+```js
+for (const key in obj) {
+  console.log(`key: ${key}, value: ${obj[key]}`);
+}
+```
+
+#### 2. Iterar sólo sobre las propiedades _propias_ (las que definimos explícitamente) del objeto
+
+```js
+for (const key in obj) {
+  if (obj.hasOwnProperty(key)) {
+    console.log(`key: ${key}, value: ${obj[key]}`);
+  }
+}
+```
+
+### :question: Cómo hacemos para clonar un objeto?
 
 ### Solución 1
 
