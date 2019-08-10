@@ -345,6 +345,7 @@ const person = Person('Dare', 'Devil', 32);
 - Por convención, se utiliza siempre la primer letra del nombre de la función en mayúscula para indicar que es una función constructora
 - Se invocan utilizando la keyword `new`
 - No necesitamos crear ni devolver el nuevo objeto a mano, `new` ya se encarga de eso
+- :warning: No podemos utilizar _arrow functions_ como funciones constructoras ya que el `this` que utilizan no puede hacer referencia a un nuevo objeto creado
 
 ```js
 function Person(firstName, lastName, age) {
