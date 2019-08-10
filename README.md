@@ -18,7 +18,7 @@
 ](https://github.com/undefinedschool/oop-js/blob/master/README.md#las-funciones-son-funciones-y-objetos)
 - [_Factory Function_ vs `constructor`](https://github.com/undefinedschool/oop-js/blob/master/README.md#factory-function-vs-constructor)
   - [Combo función-objeto](https://github.com/undefinedschool/oop-js/blob/master/README.md#combo-funci%C3%B3n-objeto)
-- [`isPrototypeOf` & `instanceof`](https://github.com/undefinedschool/oop-js/blob/master/README.md#isprototypeof--instanceof)
+- [`isPrototypeOf`, `getPrototypeOf` e `instanceof`](https://github.com/undefinedschool/oop-js/blob/master/README.md#isprototypeof--instanceof)
 - [Creación de objetos](https://github.com/undefinedschool/oop-js#creaci%C3%B3n-de-objetos)
   - [`Object.create`](https://github.com/undefinedschool/oop-js/blob/master/README.md#objectcreate)
   - [`new` keyword](https://github.com/undefinedschool/oop-js/blob/master/README.md#new-keyword)
@@ -354,7 +354,7 @@ function Person(firstName, lastName, age) {
 const person = new Person('Dare', 'Devil', 32);
 ```
 
-## `isPrototypeOf` & `instanceof`
+## `isPrototypeOf`, `getPrototypeOf` e `instanceof`
 
 ```js
 function Professor(name, teaching, subjects) {
@@ -372,10 +372,12 @@ Professor.prototype = {
 const professorX = new Professor('Charles Xavier', true, ['telepathy', 'leadership']);
 
 console.log(Professor.prototype.isPrototypeOf(professorX));
+console.log(Object.getPrototypeOf(professorX));
 console.log(professorX instanceof Professor);
 ```
 
 - `isPrototypeOf`: sirve para chequear si un objeto es prototipo de otro ó es la _clase_ que se usó para crearlo
+- `getPrototypeOf`: retorna el prototipo (objeto) de un objeto
 - `instanceof`: sirve para chequear si un objeto fue creado a partir de una determinada _función constructora_ o _clase_; un _objeto_ creado por un _constructor_ es una _instancia_ de ese _constructor_
 
 ## Creación de objetos
