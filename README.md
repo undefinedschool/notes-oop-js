@@ -1343,6 +1343,7 @@ console.log(person.fullName);
 ### tl;dr
 
 - Los _getters_ y _setters_ son _métodos_ definidos en un objeto o clase, que se ven y utilizamos "como si fueran propiedades"
+- Forman parte de la _interfaz_ del objeto, es decir, son públicos
 - Son _features_ de _ES6/2015+_
 - La idea es que accedamos y modifiquemos propiedades del objeto _de forma segura y controlada_, a través de los _getters_ y _setters_
 - Usamos _getters_ para _acceder/obtener_ al valor de una propiedad
