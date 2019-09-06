@@ -690,7 +690,7 @@ user.increment();
 
 #### Solución 3 (la mejor de las 3)
 
-- Featuring... _ES6 arrow functions_! 🙌:fireworks:
+- Feat. _ES6 arrow functions_! 🙌:fireworks:
 
 ```js
 function User(name, score) {
@@ -712,6 +712,8 @@ User.prototype.login = function() {
 const user = new User("Eva", 23);
 user.increment();
 ```
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--nHNR2C2C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/ec9exwlnw21ynkusaoks.png)
 
 - Cuando usamos _arrow functions_, `this` es asignado automáticamente al contexto (el `this`) dentro del cual la función fue declarada
   - Esto es lo que se conoce como _lexical scoping_
