@@ -1470,6 +1470,11 @@ const circle = {
 const circleClone = {...circle};
 ```
 
+```js
+// TODO: estas formas sólo sirven para hacer _shallow cloning_. Agregar comentario sobre shallow copy vs deep copy
+// ver https://lodash.com/docs/4.17.15#cloneDeep
+```
+
 ## Para seguir aprendiendo...
 
 - [Working with Objects - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
