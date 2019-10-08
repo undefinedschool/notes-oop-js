@@ -1451,6 +1451,9 @@ const circle = {
 }
 
 const circleClone = Object.assign({}, circle);
+
+// con `Object.assign()` también podemos sobreescribir algunas propiedades si le pasamos otro parámetro
+const circleWithBiggerRadius = Object.assign({}, circle, { radius: 3 });
 ```
 
 ### Solución 3
