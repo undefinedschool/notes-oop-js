@@ -1,10 +1,9 @@
+> El siguiente contenido fue elaborado por [@_nhsz](https://twitter.com/_nhsz) como guía para las clases de [undefined school](https://twitter.com/undefinedSchool)
+> Son bienvenidos los _issues_ y _PRs_ para mejorar el contenido, corregir errores, etc. 
+
+> 👉 Si te resultó útil, **se agradece que lo compartas para que le llegue a más gente!**
+
 # Notas sobre Programación Orientada a Objetos en JS
-
-> El siguiente contenido fue elaborado por [@_nhsz](https://twitter.com/_nhsz) como guía para las clases relacionadas a OOP de [undefined school](https://undefinedschool.io)
-
-> Son bienvenidos los _issues_ y _PRs_ para mejorar el contenido, corregir errores, etc
-
-> Si el contenido te resultó útil y querés colaborar, podés hacerlo [acá](https://trello.com/c/TFbCZtPN/34-donaciones) (se acepta BTC :P). Gracias!
 
 ## Índice
 
@@ -323,7 +322,7 @@ multiplyBy2.prototype; // {}
 
 ### _Factory Function_
 
-- En JavaScript, cualquier función puede retornar un objeto. **Cuando no se trata de una función constructora o _clase_, la llamamos **_Factory Function_
+- En JavaScript, cualquier función puede retornar un objeto. **Cuando no se trata de una función constructora o _clase_, la llamamos _Factory Function_**
 
 ```js
 function Person(firstName, lastName, age) {
