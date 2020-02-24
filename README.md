@@ -323,7 +323,7 @@ multiplyBy2.prototype; // {}
 
 ### _Factory Function_
 
-- En JavaScript, cualquier función puede retornar un objeto. Cuando no es una función consteructora o _clase_, la llamamos _Factory Function_
+- En JavaScript, cualquier función puede retornar un objeto. **Cuando no se trata de una función constructora o _clase_, la llamamos **_Factory Function_
 
 ```js
 function Person(firstName, lastName, age) {
