@@ -806,7 +806,7 @@ video.showTags();
 #### `this` es...
 
 1. un _parámetro implícito_ que tienen todas las funciones en JS
-2. un objeto que representa el contexto en el cuál ejecutamos una función
+2. un **objeto que representa el contexto actual de ejecución** (en el cuál estamos ejecutando una función)
 
 #### El valor de `this` depende de varios factores...
 
