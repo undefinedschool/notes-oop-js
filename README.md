@@ -733,6 +733,8 @@ obj.arrowFn();
 - Por eso es recomendable usar _arrow functions_ para los _callbacks_ y funciones comunes para definir métodos
 - [Tampoco podemos forzar el valor de `this`](https://www.youtube.com/watch?v=mBwwfts6af4) en una _arrow function_
 
+![](https://i.imgur.com/MBe0tsI.jpg)
+
 ### Bonus: algunos métodos tienen un `this` como parámetro opcional...
 
 - Se acuerdan, por ejemplo del parámetro opcional [`thisArg`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Parameters) del `forEach`?
